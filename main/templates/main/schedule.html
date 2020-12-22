@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+<head>
+<title>Schedule a Live Class</title>
+<link href="{% static 'css/bcgen3.5_min.css' %}" rel="stylesheet">
+<link href="{% static 'css/mcoursestyle.css' %}" rel="stylesheet">
+<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body>
+<form class="form-horizontal form-validate" id="adminForm" method="post" action="https://wiziqlms.herokuapp.com/manage.php">
+<div> <div class="container">
+<div id="system-message-container">
+</div> <h1 class="pull-left">Schedule a live class </h1>
+<div style="clear:both;"></div>
+<div class="row"> <hr /></div>
+<div class="control-group">
+<div class="col-sm-3 course_label pull-left text-right">*Title <a href="" data-placement="top" title="Your class title"></a></div>
+<div class="col-sm-9">
+<div class="col-sm-6">
+<input type="text" placeholder="Title" id="title" name="title" class="form-control required" value="">
+</div>
+</div>
+</div>
+<div class="control-group">
+<div class="col-sm-3 course_label pull-left text-right">*Date <a href="" data-placement="top" title="Class date"></a></div>
+<div class="col-sm-9">
+<div class="col-sm-3">
+<div class="input-group"><input type="text" placeholder="2020-07-20" id="date" name="date" class="form-control required validate-date1" value=""></div>
+</div>
+</div>
+</div>
+<div class="control-group">
+<div class="col-sm-3 course_label pull-left text-right">*Time <a href="" data-placement="top" title="Set the start and end time of your class."></a></div>
+<div class="col-sm-9">
+<div class="col-sm-6">
+<input type="text" placeholder="10:30" id="time" name="time" class="form-control required" value="">
+</div>
+</div>
+<div class="control-group">
+<div class="col-sm-3 course_label pull-left text-right">*Description <a href="" data-placement="top" title="Description"></a></div>
+<div class="col-sm-9" id="desc">
+<div class="col-sm-9">
+<textarea name="description" id="description" cols="300" rows="30" style="width:100%;height:280px;"></textarea>
+</div>
+</div>
+<div class="control-group">
+<div class="controls" align="center">
+<input class="btn" type="submit" name="submit" style="font-weight: bold;font-size:18px;" value="Schedule a Class">
+</div></div>
+<br>
+</div>
+</form>
+</body>
+</html>
